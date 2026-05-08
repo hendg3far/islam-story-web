@@ -1,0 +1,397 @@
+/* ===== Fonts ===== */
+@font-face {
+    font-family: "IBMPlexSansArabicRegular";
+    src: url("../fonts/ar/IBM_Plex_Sans_Arabic/IBMPlexSansArabic-Regular.ttf") format("truetype"),
+        url("../fonts/ar/IBM_Plex_Sans_Arabic/IBMPlexSansArabic-Regular.woff") format("woff"),
+        url("../fonts/ar/IBM_Plex_Sans_Arabic/IBMPlexSansArabic-Regular.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "IBMPlexSansArabicMedium";
+    src: url("../fonts/ar/IBM_Plex_Sans_Arabic/IBMPlexSansArabic-Medium.ttf") format("truetype"),
+        url("../fonts/ar/IBM_Plex_Sans_Arabic/IBMPlexSansArabic-Medium.woff") format("woff"),
+        url("../fonts/ar/IBM_Plex_Sans_Arabic/IBMPlexSansArabic-Medium.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "29ltBukra";
+    src: url("../fonts/ar/29lt-bukra/29lt-bukra.ttf") format("truetype"),
+        url("../fonts/ar/29lt-bukra/29lt-bukra.woff") format("woff"),
+        url("../fonts/ar/29lt-bukra/29lt-bukra.woff2") format("woff2");
+}
+
+:root {
+    --font-primary-regular: "IBMPlexSansArabicRegular", sans-serif;
+    --font-primary-bold: "IBMPlexSansArabicMedium", sans-serif;
+    --font-secondary: "29ltBukra", sans-serif;
+
+    --color-primary: #FAB423;
+    --color-secondary: #F2EEDF;
+    --color-dark: #1B1B1B;
+    --color-white: #FFFFFF;
+    --color-gray: #7F7F7F;
+}
+
+$colors: (
+    "primary": #FAB423,
+    "secondary": #F2EEDF,
+    "white": #FFFFFF,
+    "dark": #1B1B1B,
+    "gray": #7F7F7F
+);
+
+$fonts: (
+    "primary-regular": var(--font-primary-regular),
+    "primary-bold": var(--font-primary-bold),
+    "secondary": var(--font-secondary)
+);
+
+$breakpoints: (
+    "sm": 576px,
+    "md": 768px,
+    "lg": 992px,
+    "xl": 1200px
+);
+
+$font-sizes: (
+    "xs": 12px,
+    "sm": 14px,
+    "md": 16px,
+    "lg": 18px,
+    "xl": 20px,
+    "2xl": 24px,
+    "3l": 32px,
+    "4xl": 40px
+);
+
+$icon-sizes: (
+    "24": 24px,
+    "32": 32px,
+    "54": 54px,
+    "60": 60px,
+    "64": 64px,
+    "80": 80px,
+    "100": 100px,
+    "120": 120px,
+    "128": 128px
+);
+
+$spacings: (
+    "8": 8px,
+    "10": 10px,
+    "12": 12px,
+    "16": 16px,
+    "20": 20px,
+    "24": 24px,
+    "30": 30px,
+    "32": 32px,
+    "40": 40px,
+    "60": 60px,
+    "70": 70px,
+    "80": 80px,
+    "100": 100px,
+    "120": 120px,
+);
+
+/* ===== Typography ===== */
+@each $name, $value in $fonts {
+    .font-#{$name} {
+        font-family: $value;
+    }
+}
+
+@each $name, $size in $font-sizes {
+    .text-#{$name} {
+        font-size: $size;
+    }
+}
+
+@each $breakpoint, $width in $breakpoints {
+    @media (min-width: $width) {
+        @each $name, $size in $font-sizes {
+            .#{$breakpoint}-text-#{$name} {
+                font-size: $size !important;
+            }
+        }
+    }
+}
+
+/* ===== Colors ===== */
+@each $name, $value in $colors {
+    .text-#{$name}-color {
+        color: $value;
+    }
+
+    .hover-text-#{$name}:hover {
+        color: $value !important;
+    }
+
+    .bg-#{$name}-color {
+        --bg-opacity: 1;
+        background-color: rgba($value, var(--bg-opacity));
+    }
+
+    .hover-bg-#{$name}:hover {
+        background-color: $value !important;
+    }
+}
+
+/* ===== Icons ===== */
+@each $name, $size in $icon-sizes {
+    .icon-#{$name} {
+        width: $size;
+        height: $size;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@each $breakpoint, $value in $breakpoints {
+    @media (min-width: $value) {
+        @each $name, $size in $icon-sizes {
+            .#{$breakpoint}-icon-#{$name} {
+                width: $size;
+                height: $size;
+            }
+        }
+    }
+}
+
+/* ===== Spacing ===== */
+@each $name, $value in $spacings {
+    .p-#{$name} {
+        padding: $value;
+    }
+
+    .pt-#{$name} {
+        padding-top: $value;
+    }
+
+    .ps-#{$name} {
+        padding-inline-start: $value;
+    }
+
+    .pe-#{$name} {
+        padding-inline-end: $value;
+    }
+
+    .pb-#{$name} {
+        padding-bottom: $value;
+    }
+
+    .px-#{$name} {
+        padding-left: $value;
+        padding-right: $value;
+    }
+
+    .py-#{$name} {
+        padding-top: $value;
+        padding-bottom: $value;
+    }
+
+    .m-#{$name} {
+        margin: $value;
+    }
+
+    .mt-#{$name} {
+        margin-top: $value;
+    }
+
+    .mb-#{$name} {
+        margin-bottom: $value;
+    }
+
+    .ms-#{$name} {
+        margin-inline-start: $value;
+    }
+
+    .me-#{$name} {
+        margin-inline-end: $value;
+    }
+
+    .mx-#{$name} {
+        margin-left: $value;
+        margin-right: $value;
+    }
+
+    .my-#{$name} {
+        margin-top: $value;
+        margin-bottom: $value;
+    }
+
+    .gap-#{$name} {
+        gap: $value;
+    }
+}
+
+@each $breakpoint, $width in $breakpoints {
+    @media (min-width: $width) {
+        @each $name, $value in $spacings {
+
+            // Padding End (Logical)
+            .#{$breakpoint}-pe-#{$name} {
+                -webkit-padding-end: $value;
+                padding-inline-end: $value;
+            }
+
+            // Padding Start (Logical)
+            .#{$breakpoint}-ps-#{$name} {
+                -webkit-padding-start: $value;
+                padding-inline-start: $value;
+            }
+
+            .#{$breakpoint}-p-#{$name} {
+                padding: $value;
+            }
+
+            .#{$breakpoint}-pt-#{$name} {
+                padding-top: $value;
+            }
+
+            .#{$breakpoint}-pb-#{$name} {
+                padding-bottom: $value;
+            }
+
+            .#{$breakpoint}-px-#{$name} {
+                padding-left: $value;
+                padding-right: $value;
+            }
+
+            .#{$breakpoint}-py-#{$name} {
+                padding-top: $value;
+                padding-bottom: $value;
+            }
+
+            .#{$breakpoint}-m-#{$name} {
+                margin: $value;
+            }
+
+            .#{$breakpoint}-mx-#{$name} {
+                margin-left: $value;
+                margin-right: $value;
+            }
+
+            .#{$breakpoint}-mt-#{$name} {
+                margin-top: $value;
+            }
+
+            .#{$breakpoint}-mb-#{$name} {
+                margin-bottom: $value;
+            }
+
+            .#{$breakpoint}-my-#{$name} {
+                margin-top: $value;
+                margin-bottom: $value;
+            }
+
+            .#{$breakpoint}-gap-#{$name} {
+                gap: $value;
+            }
+        }
+    }
+}
+
+/* ===== Aspect Ratio ===== */
+$aspects: (
+    "thumbnail": (16, 9),
+    "square": (1, 1),
+);
+
+@each $name, $dims in $aspects {
+    $w: nth($dims, 1);
+    $h: nth($dims, 2);
+
+    .aspect-#{$name} {
+        aspect-ratio: #{$w} / #{$h};
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+/* ===== Utilities ===== */
+@mixin hover-opacity($opacity: 0.5, $duration: 0.2s) {
+    transition: opacity $duration ease-in-out;
+
+    &:hover {
+        opacity: $opacity;
+    }
+}
+
+.hover-opacity-50 {
+    @include hover-opacity(0.5);
+}
+
+@for $i from 1 through 5 {
+    .line-clamp-#{$i} {
+        display: -webkit-box;
+        -webkit-line-clamp: #{$i};
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        line-height: 1.5;
+        min-height: calc(1.5em * #{$i});
+    }
+}
+
+/* Global Styles */
+body {
+    font-family: map-get($fonts, "primary-regular");
+    color: var(--color-dark);
+    font-size: map-get($font-sizes, "md");
+}
+
+h1,
+.h1 {
+    font-size: map-get($font-sizes, "4xl");
+    font-family: map-get($fonts, "secondary");
+}
+
+h2,
+.h2 {
+    font-size: map-get($font-sizes, "3xl");
+    font-family: map-get($fonts, "secondary");
+}
+
+h3,
+.h3 {
+    font-size: map-get($font-sizes, "2xl");
+    font-family: map-get($fonts, "secondary");
+}
+
+h4,
+.h4 {
+    font-size: map-get($font-sizes, "xl");
+    font-family: map-get($fonts, "secondary");
+}
+
+h5,
+.h5 {
+    font-size: map-get($font-sizes, "lg");
+    font-family: map-get($fonts, "secondary");
+}
+
+h6,
+.h6 {
+    font-size: map-get($font-sizes, "md");
+    font-family: map-get($fonts, "secondary");
+}
+
+p,
+span {
+    color: var(--color-gray);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* RTL Support */
+html[lang="ar"],
+html[dir="rtl"] {
+    direction: rtl;
+}
