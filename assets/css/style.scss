@@ -1,29 +1,41 @@
 /* ===== Fonts ===== */
 @font-face {
     font-family: "IBMPlexSansArabicRegular";
-    src: url("../fonts/ar/IBM_Plex_Sans_Arabic/IBMPlexSansArabic-Regular.ttf") format("truetype"),
+    src:
         url("../fonts/ar/IBM_Plex_Sans_Arabic/IBMPlexSansArabic-Regular.woff") format("woff"),
         url("../fonts/ar/IBM_Plex_Sans_Arabic/IBMPlexSansArabic-Regular.woff2") format("woff2");
+    font-display: swap;
 }
 
 @font-face {
     font-family: "IBMPlexSansArabicMedium";
-    src: url("../fonts/ar/IBM_Plex_Sans_Arabic/IBMPlexSansArabic-Medium.ttf") format("truetype"),
+    src:
         url("../fonts/ar/IBM_Plex_Sans_Arabic/IBMPlexSansArabic-Medium.woff") format("woff"),
         url("../fonts/ar/IBM_Plex_Sans_Arabic/IBMPlexSansArabic-Medium.woff2") format("woff2");
+    font-display: swap;
 }
 
 @font-face {
-    font-family: "29ltBukra";
-    src: url("../fonts/ar/29lt-bukra/29lt-bukra.ttf") format("truetype"),
+    font-family: "29ltBukraRegular";
+    src:
         url("../fonts/ar/29lt-bukra/29lt-bukra.woff") format("woff"),
         url("../fonts/ar/29lt-bukra/29lt-bukra.woff2") format("woff2");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "29ltBukraBold";
+    src:
+        url("../fonts/ar/29lt-bukra/29lt-bukra-bold.woff") format("woff"),
+        url("../fonts/ar/29lt-bukra/29lt-bukra-bold.woff2") format("woff2");
+    font-display: swap;
 }
 
 :root {
     --font-primary-regular: "IBMPlexSansArabicRegular", sans-serif;
     --font-primary-medium: "IBMPlexSansArabicMedium", sans-serif;
-    --font-secondary: "29ltBukra", sans-serif;
+    --font-secondary-regular: "29ltBukraRegular", sans-serif;
+    --font-secondary-bold: "29ltBukraBold", sans-serif;
 
     --color-primary: #FAB423;
     --color-secondary: #F2EEDF;
@@ -45,7 +57,8 @@ $colors: (
 $fonts: (
     "primary-regular": var(--font-primary-regular),
     "primary-medium": var(--font-primary-medium),
-    "secondary": var(--font-secondary)
+    "secondary-regular": var(--font-secondary-regular),
+    "secondary-bold": var(--font-secondary-bold)
 );
 
 $breakpoints: (
@@ -62,17 +75,21 @@ $font-sizes: (
     "lg": 18px,
     "xl": 20px,
     "2xl": 24px,
-    "3l": 32px,
+    "3xl": 32px,
     "4xl": 40px
 );
 
 $icon-sizes: (
     "24": 24px,
     "32": 32px,
+    "40": 40px,
+    "48": 48px,
     "54": 54px,
+    "58": 58px,
     "60": 60px,
     "64": 64px,
     "80": 80px,
+    "88": 88px,
     "100": 100px,
     "120": 120px,
     "128": 128px
@@ -91,6 +108,7 @@ $spacings: (
     "48": 48px,
     "56": 56px,
     "60": 60px,
+    "64": 64px,
     "70": 70px,
     "80": 80px,
     "100": 100px,
@@ -123,7 +141,7 @@ $spacings: (
 /* ===== Colors ===== */
 @each $name, $value in $colors {
     .text-#{$name}-color {
-        color: $value;
+        color: $value !important;
     }
 
     .hover-text-#{$name}:hover {
@@ -304,6 +322,9 @@ $spacings: (
 $aspects: (
     "thumbnail": (16, 9),
     "square": (1, 1),
+    "media":(405, 228),
+    "library": (872, 491),
+    "book": (300, 415)
 );
 
 @each $name, $dims in $aspects {
@@ -344,44 +365,49 @@ $aspects: (
 /* Global Styles */
 body {
     font-family: map-get($fonts, "primary-regular");
-    color: var(--color-gray);
+    color: var(--color-dark);
     font-size: map-get($font-sizes, "md");
+}
+
+p,
+ul {
+    color: var(--color-gray);
 }
 
 h1,
 .h1 {
     font-size: map-get($font-sizes, "4xl");
-    font-family: map-get($fonts, "secondary");
+    font-family: map-get($fonts, "secondary-bold");
 }
 
 h2,
 .h2 {
     font-size: map-get($font-sizes, "3xl");
-    font-family: map-get($fonts, "secondary");
+    font-family: map-get($fonts, "secondary-bold");
 }
 
 h3,
 .h3 {
     font-size: map-get($font-sizes, "2xl");
-    font-family: map-get($fonts, "secondary");
+    font-family: map-get($fonts, "secondary-bold");
 }
 
 h4,
 .h4 {
     font-size: map-get($font-sizes, "xl");
-    font-family: map-get($fonts, "secondary");
+    font-family: map-get($fonts, "secondary-bold");
 }
 
 h5,
 .h5 {
     font-size: map-get($font-sizes, "lg");
-    font-family: map-get($fonts, "secondary");
+    font-family: map-get($fonts, "secondary-bold");
 }
 
 h6,
 .h6 {
     font-size: map-get($font-sizes, "md");
-    font-family: map-get($fonts, "secondary");
+    font-family: map-get($fonts, "secondary-bold");
 }
 
 img {
@@ -390,6 +416,7 @@ img {
 }
 
 a {
+    color: inherit;
     text-decoration: none;
     -webkit-transition: 0.2s ease-in-out;
     transition: 0.2s ease-in-out;
@@ -487,6 +514,36 @@ a {
 
 }
 
+/* === Forms === */
+input,
+select,
+.form-control,
+.ss-main {
+    border-color: #D5D7DA;
+    border-radius: 8px;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #D5D7DA;
+}
+
+.ss-content .ss-list .ss-option.ss-highlighted,
+.ss-content .ss-list .ss-option:not(.ss-disabled).ss-selected {
+    background-color: var(--color-primary);
+    color: var(--color-dark);
+    border-radius: 8px;
+}
+
+.ss-content .ss-list .ss-option:hover:not(.ss-disabled) {
+    border: 0;
+}
+
+.ss-content {
+    border-radius: 8px;
+    border-color: #D5D7DA;
+}
+
 /* === Dropdown === */
 .dropdown-menu {
     --bs-dropdown-bg: #0D0D0D;
@@ -550,6 +607,35 @@ a {
     vertical-align: middle;
 }
 
+/* === Tabs === */
+.nav-tabs.nav-tabs-1 {
+    border: 0;
+}
+
+.nav-tabs.nav-tabs-1 .nav-link {
+    border: 0;
+    color: var(--color-dark);
+    background-color: transparent;
+    font-family: var(--font-secondary-regular);
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+
+    &:hover {
+        color: var(--color-primary);
+    }
+}
+
+.nav-tabs.nav-tabs-1 .nav-item.show .nav-link,
+.nav-tabs.nav-tabs-1 .nav-link.active {
+    color: var(--color-primary);
+    font-family: var(--font-secondary-bold);
+}
+
+/* === Card === */
+.card {
+    --bs-card-border-color: var(--color-light);
+}
+
 /* === Top Nav === */
 .top-nav-start {
     >div:not(:last-child) {
@@ -558,6 +644,7 @@ a {
     }
 }
 
+/* === Footer === */
 footer {
     .border {
         border-color: rgba(#FFFFFF, 0.15) !important;
@@ -567,6 +654,88 @@ footer {
         border-left: 1px solid rgba(#FFFFFF, 0.15) !important;
         height: 16px;
     }
+}
+
+/* === Animated Arrow === */
+.animated-arrow {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none
+}
+
+.animated-arrow .arrow-wrapper {
+    display: inline-block;
+    overflow: hidden;
+    height: 14px;
+    margin-left: 8px
+}
+
+.animated-arrow .arrow-wrapper svg {
+    display: block;
+    --arrow-direction: 1;
+    transition: transform .3s ease
+}
+
+.animated-arrow:hover .arrow-wrapper svg {
+    animation: arrowInfiniteSlide .4s ease-in-out
+}
+
+
+@keyframes arrowInfiniteSlide {
+    0% {
+        transform: translateY(0) scaleX(var(--arrow-direction, 1))
+    }
+
+    49% {
+        transform: translateY(-120%) scaleX(var(--arrow-direction, 1))
+    }
+
+    50% {
+        transform: translateY(120%) scaleX(var(--arrow-direction, 1))
+    }
+
+    100% {
+        transform: translateY(0) scaleX(var(--arrow-direction, 1))
+    }
+}
+
+/* === Splide Custom Styles === */
+.splide__pagination__page {
+    width: 13px;
+    height: 13px;
+    background-color: #D9D9D9;
+}
+
+.splide__pagination__page.is-active {
+    transform: none;
+    background-color: #878787;
+}
+
+/* === Utility Classes === */
+.pointer-events-none {
+    pointer-events: none
+}
+
+.line-primary {
+    width: 3px;
+    height: 18px;
+    background-color: var(--color-primary);
+}
+
+.bg-linear-gradient {
+    background: linear-gradient(180deg, #F2EEDF 0%, #FFFFFF 73.4%);
+}
+
+.bg-linear-gradient-dark {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 6.87%, rgba(3, 3, 3, 0) 49.88%),
+        linear-gradient(180deg, rgba(0, 0, 0, 0.4) 7.83%, rgba(0, 0, 0, 0) 40.96%);
+
+}
+
+.icon-blur {
+    backdrop-filter: blur(8px);
+    background-color: rgba($color: #FFFFFF, $alpha: 0.3);
+    color: var(--color-white);
 }
 
 /* RTL Support */
