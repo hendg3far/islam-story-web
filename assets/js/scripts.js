@@ -129,4 +129,78 @@ document.addEventListener("DOMContentLoaded", function () {
       },
     }).mount();
   }
+
+  const items = document.querySelectorAll('.mega-menu-item--has-children');
+  const container = document.querySelector('.mega-menu-columns');
+
+  function updateLastBorder() {
+    document.querySelectorAll('.mega-menu-list, .mega-menu-sublist').forEach(el => {
+      el.classList.remove('last-visible');
+    });
+
+    const visibleLists = Array.from(document.querySelectorAll('.mega-menu-list, .mega-menu-sublist'))
+      .filter(el => {
+        const style = window.getComputedStyle(el);
+        return style.display !== 'none' && style.visibility !== 'hidden';
+      });
+
+    if (visibleLists.length > 0) {
+      visibleLists[visibleLists.length - 1].classList.add('last-visible');
+    }
+  }
+
+  function openSubMenu(item) {
+    const parentList = item.parentElement;
+    const siblings = parentList.querySelectorAll(':scope > .mega-menu-item--has-children');
+
+    siblings.forEach(sibling => {
+      if (sibling !== item) {
+        sibling.classList.remove('is-open');
+        const siblingSub = sibling.querySelector('.mega-menu-sublist');
+        if (siblingSub) siblingSub.classList.remove('show');
+      }
+    });
+
+    item.classList.add('is-open');
+    const subMenu = item.querySelector('.mega-menu-sublist');
+    if (subMenu) {
+      subMenu.classList.add('show');
+    }
+    updateLastBorder();
+  }
+
+  items.forEach(item => {
+    item.addEventListener('mouseenter', (e) => {
+      if (window.innerWidth >= 992) {
+        openSubMenu(item);
+      }
+    });
+
+    item.addEventListener('click', (e) => {
+      if (window.innerWidth < 992) {
+        const subMenu = item.querySelector('.mega-menu-sublist');
+        if (subMenu && !subMenu.classList.contains('show')) {
+          e.preventDefault();
+          e.stopPropagation();
+          openSubMenu(item);
+        }
+      }
+    });
+  });
+
+  if (container) {
+    container.addEventListener('mouseleave', () => {
+      if (window.innerWidth >= 992) {
+        items.forEach(item => {
+          item.classList.remove('is-open');
+          const sub = item.querySelector('.mega-menu-sublist');
+          if (sub) sub.classList.remove('show');
+        });
+        updateLastBorder();
+      }
+    });
+  }
+
+  updateLastBorder();
+
 });

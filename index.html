@@ -608,16 +608,13 @@
     <nav class="navbar navbar-expand-lg position-absolute z-3 w-100">
         <div class="container">
             <a class="navbar-brand" href="#"><img src="./assets/images/logo.webp" alt="logo img" loading="lazy"></a>
-
-            <div class="d-flex ms-auto d-lg-none d-block" role="search">
-                <button class="btn border-0 text-white-color px-0" type="button"><svg width="24" height="24"
-                        viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M21 21L17.5001 17.5M20 11.5C20 16.1944 16.1944 20 11.5 20C6.80558 20 3 16.1944 3 11.5C3 6.80558 6.80558 3 11.5 3C16.1944 3 20 6.80558 20 11.5Z"
-                            stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                </button>
-            </div>
+            <button class="btn border-0 text-white-color px-0 d-lg-none ms-auto" type="button"><svg width="24"
+                    height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M21 21L17.5001 17.5M20 11.5C20 16.1944 16.1944 20 11.5 20C6.80558 20 3 16.1944 3 11.5C3 6.80558 6.80558 3 11.5 3C16.1944 3 20 6.80558 20 11.5Z"
+                        stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -626,6 +623,7 @@
                         stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
             </button>
+
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav gap-32 ms-auto">
                     <li class="nav-item">
@@ -639,180 +637,151 @@
 
                         <div class="dropdown-menu mega-menu w-100 rounded-0 border-0 py-32">
                             <div class="container">
-                                <div class="d-flex flex-column gap-64">
-                                    <h2 class="mb-0">المقالات</h2>
-                                    <div
-                                        class="dropdown-list d-flex flex-lg-row flex-column row-gap-4  justify-content-between">
-                                        <ol class="dropdown-list-item d-flex flex-column gap-24"
-                                            style="list-style-type: decimal-leading-zero;">
-                                            <li><a href="#">الرسول <svg width="16" height="16" viewBox="0 0 16 16"
-                                                        fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M10 4L6 8L10 12" stroke="currentColor"
-                                                            stroke-opacity="0.5" stroke-width="2" stroke-linecap="round"
-                                                            stroke-linejoin="round" />
-                                                    </svg></a>
-                                            </li>
-                                            <li><a href="#" data-target="tareekh">التاريخ الإسلامي <svg width="16"
-                                                        height="16" viewBox="0 0 16 16" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M10 4L6 8L10 12" stroke="currentColor"
-                                                            stroke-opacity="0.5" stroke-width="2" stroke-linecap="round"
-                                                            stroke-linejoin="round" />
-                                                    </svg></a>
-                                            </li>
-                                            <li><a href="#" data-target="hadara">الحضارة <svg width="16" height="16"
-                                                        viewBox="0 0 16 16" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M10 4L6 8L10 12" stroke="currentColor"
-                                                            stroke-opacity="0.5" stroke-width="2" stroke-linecap="round"
-                                                            stroke-linejoin="round" />
-                                                    </svg></a>
-                                            </li>
-                                            <li><a href="#">الأعلام <svg width="16" height="16" viewBox="0 0 16 16"
-                                                        fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M10 4L6 8L10 12" stroke="currentColor"
-                                                            stroke-opacity="0.5" stroke-width="2" stroke-linecap="round"
-                                                            stroke-linejoin="round" />
-                                                    </svg></a></li>
-                                            <li><a href="#">المسلمون الجدد <svg width="16" height="16"
-                                                        viewBox="0 0 16 16" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M10 4L6 8L10 12" stroke="currentColor"
-                                                            stroke-opacity="0.5" stroke-width="2" stroke-linecap="round"
-                                                            stroke-linejoin="round" />
-                                                    </svg></a>
-                                            </li>
-                                            <li><a href="#">الشهادات <svg width="16" height="16" viewBox="0 0 16 16"
-                                                        fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M10 4L6 8L10 12" stroke="currentColor"
-                                                            stroke-opacity="0.5" stroke-width="2" stroke-linecap="round"
-                                                            stroke-linejoin="round" />
-                                                    </svg></a></li>
-                                            <li><a href="#">في مثل هذا اليوم <svg width="16" height="16"
-                                                        viewBox="0 0 16 16" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M10 4L6 8L10 12" stroke="currentColor"
-                                                            stroke-opacity="0.5" stroke-width="2" stroke-linecap="round"
-                                                            stroke-linejoin="round" />
-                                                    </svg></a>
-                                            </li>
-                                            <li><a href="#" class="active">جروح نازفة <svg width="16" height="16"
-                                                        viewBox="0 0 16 16" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M10 4L6 8L10 12" stroke="currentColor"
-                                                            stroke-opacity="0.5" stroke-width="2" stroke-linecap="round"
-                                                            stroke-linejoin="round" />
-                                                    </svg></a>
-                                            </li>
-                                            <li><a href="#">الأحداث <svg width="16" height="16" viewBox="0 0 16 16"
-                                                        fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M10 4L6 8L10 12" stroke="currentColor"
-                                                            stroke-opacity="0.5" stroke-width="2" stroke-linecap="round"
-                                                            stroke-linejoin="round" />
-                                                    </svg></a>
-                                            </li>
-                                        </ol>
 
-                                        <ol class="dropdown-list-item d-flex flex-column gap-24"
-                                            style="list-style-type: decimal-leading-zero;">
+                                <div class="mega-menu-content d-flex flex-column gap-40">
 
-                                            <li><a href="#" class="active">فلسطين
-                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M10 4L6 8L10 12" stroke="currentColor"
-                                                            stroke-opacity="0.5" stroke-width="2" stroke-linecap="round"
-                                                            stroke-linejoin="round" />
-                                                    </svg></a></li>
-                                            <li><a href="#">الاحتلال الأوربي</a></li>
-                                            <li><a href="#" data-target="africa">إفريقيا <svg width="16" height="16"
-                                                        viewBox="0 0 16 16" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M10 4L6 8L10 12" stroke="currentColor"
-                                                            stroke-opacity="0.5" stroke-width="2" stroke-linecap="round"
-                                                            stroke-linejoin="round" />
-                                                    </svg></a></li>
-                                            <li><a href="#" data-target="asia">آسيا <svg width="16" height="16"
-                                                        viewBox="0 0 16 16" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M10 4L6 8L10 12" stroke="currentColor"
-                                                            stroke-opacity="0.5" stroke-width="2" stroke-linecap="round"
-                                                            stroke-linejoin="round" />
-                                                    </svg></a></li>
-                                            <li><a href="#" data-target="shia">التشييع <svg width="16" height="16"
-                                                        viewBox="0 0 16 16" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M10 4L6 8L10 12" stroke="currentColor"
-                                                            stroke-opacity="0.5" stroke-width="2" stroke-linecap="round"
-                                                            stroke-linejoin="round" />
-                                                    </svg></a></li>
-                                            <li><a href="#">عام</a>
-                                            </li>
-                                        </ol>
+                                    <h2 class="mega-menu-title mb-0">
+                                        المقالات
+                                    </h2>
 
-                                        <ol class="dropdown-list-item d-flex flex-column gap-24"
-                                            style="list-style-type: decimal-leading-zero;">
-                                            <li> <a href="#">تاريخ الاحتلال </a> </li>
-                                            <li>
-                                                <a class="active" href="#" data-target="nation-duty">واجب الأمة <svg
-                                                        width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M10 4L6 8L10 12" stroke="currentColor"
-                                                            stroke-opacity="0.5" stroke-width="2" stroke-linecap="round"
-                                                            stroke-linejoin="round" />
-                                                    </svg>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">الاقصى </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">أعرف عدوك</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">الحاضر</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">فكر </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">فنون وآداب </a>
-                                            </li>
-                                        </ol>
+                                    <div class="mega-menu-columns d-flex flex-lg-row flex-column row-gap-4">
 
-                                        <ol class="dropdown-list-item d-flex flex-column gap-24"
-                                            style="list-style-type: decimal-leading-zero;">
-                                            <li>
-                                                <a href="#">عموم الأمة <svg width="16" height="16" viewBox="0 0 16 16"
-                                                        fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M10 4L6 8L10 12" stroke="currentColor"
-                                                            stroke-opacity="0.5" stroke-width="2" stroke-linecap="round"
-                                                            stroke-linejoin="round" />
-                                                    </svg>
-                                                </a>
+                                        <!--Level 1-->
+                                        <ul class="mega-menu-list">
+                                            <li class=" mega-menu-item mega-menu-item--has-children">
+                                                <a href="#" class="mega-menu-link mega-menu-link--active"> الرسول <img
+                                                        src="./assets/images/icons/chevron-down.svg" alt="arrow"
+                                                        loading="lazy"></a>
+                                                <!--Level 2-->
+                                                <ul class="mega-menu-sublist">
+                                                    <li class="mega-menu-item mega-menu-item--has-children">
+                                                        <a href="#" class="mega-menu-link mega-menu-link--active">فلسطين
+                                                            <img src="./assets/images/icons/chevron-down.svg"
+                                                                alt="arrow" loading="lazy"></a>
+                                                        <!--Level 3-->
+                                                        <ul class="mega-menu-sublist">
+                                                            <li class="mega-menu-item">
+                                                                <a href="#" class="mega-menu-link">تاريخ الاحتلال </a>
+                                                            </li>
+                                                            <li class="mega-menu-item mega-menu-item--has-children">
+                                                                <a href="#"
+                                                                    class="mega-menu-link mega-menu-link--active">واجب
+                                                                    الأمة <img
+                                                                        src="./assets/images/icons/chevron-down.svg"
+                                                                        alt="arrow" loading="lazy"></a>
+                                                                <!--Level 4-->
+                                                                <ul class="mega-menu-sublist">
+                                                                    <li
+                                                                        class="mega-menu-item mega-menu-item--has-children">
+                                                                        <a href="#"
+                                                                            class="mega-menu-link mega-menu-link--active">عموم
+                                                                            الأمة
+                                                                            <img src="./assets/images/icons/chevron-down.svg"
+                                                                                alt="arrow" loading="lazy">
+                                                                        </a>
+                                                                        <!--Level 5-->
+                                                                        <ul class="mega-menu-sublist">
+                                                                            <li class="mega-menu-item">
+                                                                                <a href="#" class="mega-menu-link">اسم
+                                                                                    القسم </a>
+                                                                            </li>
+                                                                            <li class="mega-menu-item">
+                                                                                <a href="#" class="mega-menu-link">اسم
+                                                                                    القسم</a>
+                                                                            </li>
+                                                                            <li class="mega-menu-item">
+                                                                                <a href="#" class="mega-menu-link">اسم
+                                                                                    القسم</a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="mega-menu-item">
+                                                        <a href="#" class="mega-menu-link">الاحتلال الأوربي </a>
+                                                    </li>
+                                                    <li class="mega-menu-item">
+                                                        <a href="#" class="mega-menu-link">إفريقيا <img
+                                                                src="./assets/images/icons/chevron-down.svg" alt="arrow"
+                                                                loading="lazy"></a>
+                                                    </li>
+                                                    <li class="mega-menu-item">
+                                                        <a href="#" class="mega-menu-link">آسيا <img
+                                                                src="./assets/images/icons/chevron-down.svg" alt="arrow"
+                                                                loading="lazy"></a>
+                                                    </li>
+                                                    <li class="mega-menu-item">
+                                                        <a href="#" class="mega-menu-link">التشييع <img
+                                                                src="./assets/images/icons/chevron-down.svg" alt="arrow"
+                                                                loading="lazy"></a>
+                                                    </li>
+                                                    <li class="mega-menu-item">
+                                                        <a href="#" class="mega-menu-link">عام </a>
+                                                    </li>
+                                                </ul>
                                             </li>
-                                            <li>
-                                                <a href="#">اهل فلسطين</a>
+                                            <li class="mega-menu-item mega-menu-item--has-children">
+                                                <a href="#" class="mega-menu-link">التاريخ الإسلامي <img
+                                                        src="./assets/images/icons/chevron-down.svg" alt="arrow"
+                                                        loading="lazy"></a>
+                                                <ul class="mega-menu-sublist">
+                                                    <li class="mega-menu-item">
+                                                        <a href="#" class="mega-menu-link">اسم
+                                                            القسم </a>
+                                                    </li>
+                                                    <li class="mega-menu-item">
+                                                        <a href="#" class="mega-menu-link">اسم
+                                                            القسم</a>
+                                                    </li>
+                                                    <li class="mega-menu-item">
+                                                        <a href="#" class="mega-menu-link">اسم
+                                                            القسم</a>
+                                                    </li>
+                                                </ul>
                                             </li>
-                                            <li>
-                                                <a href="#">الشخصيات البارزة </a>
+                                            <li class="mega-menu-item">
+                                                <a href="#" class="mega-menu-link">الحضارة <img
+                                                        src="./assets/images/icons/chevron-down.svg" alt="arrow"
+                                                        loading="lazy"></a>
                                             </li>
-                                            <li>
-                                                <a href="#">أصحاب البيان </a>
+                                            <li class="mega-menu-item">
+                                                <a href="#" class="mega-menu-link">الأعلام <img
+                                                        src="./assets/images/icons/chevron-down.svg" alt="arrow"
+                                                        loading="lazy"></a>
                                             </li>
-                                            <li>
-                                                <a href="#">فئات ومؤسسات </a>
+                                            <li class="mega-menu-item">
+                                                <a href="#" class="mega-menu-link">المسلمون الجدد <img
+                                                        src="./assets/images/icons/chevron-down.svg" alt="arrow"
+                                                        loading="lazy"></a>
                                             </li>
-                                            <li> <a href="#">قادة وساسة </a> </li>
-                                        </ol>
+                                            <li class="mega-menu-item">
+                                                <a href="#" class="mega-menu-link">الشهادات <img
+                                                        src="./assets/images/icons/chevron-down.svg" alt="arrow"
+                                                        loading="lazy"></a>
+                                            </li>
+                                            <li class="mega-menu-item">
+                                                <a href="#" class="mega-menu-link">في مثل هذا اليوم <img
+                                                        src="./assets/images/icons/chevron-down.svg" alt="arrow"
+                                                        loading="lazy"></a>
+                                            </li>
+                                            <li class="mega-menu-item">
+                                                <a href="#" class="mega-menu-link">جروح نازفة <img
+                                                        src="./assets/images/icons/chevron-down.svg" alt="arrow"
+                                                        loading="lazy"></a>
+                                            </li>
+                                            <li class="mega-menu-item">
+                                                <a href="#" class="mega-menu-link">الأحداث <img
+                                                        src="./assets/images/icons/chevron-down.svg" alt="arrow"
+                                                        loading="lazy"></a>
+                                            </li>
+                                        </ul>
 
-                                        <ol class="dropdown-list-item d-flex flex-column gap-24"
-                                            style="list-style-type: decimal-leading-zero;">
-                                            <li><a href="#">اسم القسم</a> </li>
-                                            <li><a href="#">اسم القسم</a> </li>
-                                            <li><a href="#">اسم القسم</a> </li>
-                                        </ol>
                                     </div>
+
                                 </div>
+
                             </div>
                         </div>
                     </li>
