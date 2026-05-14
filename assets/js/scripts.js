@@ -349,4 +349,23 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   }
+
+  var alternativePlayers = document.querySelectorAll(".sound-js");
+
+  if (alternativePlayers.length > 0 && typeof videojs !== "undefined") {
+    alternativePlayers.forEach(function (element, index) {
+      var player = videojs(element, {
+        controls: true,
+        fluid: false,
+        playbackRates: [0.5, 1, 1.5, 2],
+        controlBar: {
+          children: ["playToggle", "volumePanel", "progressControl"],
+        },
+      });
+
+      player.on("ready", function () {
+        console.log("Alternative player " + (index + 1) + " is ready.");
+      });
+    });
+  }
 });
