@@ -33,6 +33,13 @@
         <link rel="stylesheet" href="./assets/vendor/slim-select-master/slimselect.css">
     </noscript>
 
+    <link rel="preload" href="https://vjs.zencdn.net/8.16.1/video-js.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://vjs.zencdn.net/8.16.1/video-js.css">
+    </noscript>
+
+
     <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 
@@ -872,8 +879,8 @@
                         <li class="breadcrumb-item active" aria-current="page">ملخص الدكتور راغب السرجاني عن ا ...</li>
                     </ol>
                 </nav>
-                <h1 class="text-title mb-0 lh-lg wow fadeInUp">مؤسسة الملك خالد والبنك الأهلي السعودي يعلنان عن الفائزين
-                    ببرنامج <br> أهالينا للاستثمار
+                <h1 class="text-title mb-0 lh-lg wow fadeInUp">ملخص الدكتور راغب السرجاني عن اهم مواقف السيرة النبوية و
+                    اثرها في <br> العالم الحديث
                 </h1>
                 <div class="d-flex gap-16 wow fadeInUp">
                     <div class="d-flex align-items-center gap-24 text-sm">
@@ -938,8 +945,13 @@
                 <div class="row">
                     <div class="col-lg-8">
                         <div class="d-flex flex-column gap-40 wow fadeInUp lh-lg text-lg">
-                            <img class="w-100 rounded-3" src="./assets/images/blog/5.webp" alt="blog title"
-                                loading="lazy">
+
+                            <video-player>
+                                <video class="video-js w-100 rounded-3" src="./assets/images/media/video.webm"
+                                    playsinline></video>
+                            </video-player>
+
+
                             <div class="row">
                                 <div class="d-flex flex-md-row flex-column align-items-center gap-24">
                                     <div class="col">
@@ -1498,6 +1510,7 @@
     <script src="./assets/vendor/splide4.1.3/js/splide.min.js" defer></script>
     <script src="./assets/vendor/WOW-master/wow.min.js" defer></script>
     <script src="./assets/vendor/slim-select-master/slimselect.js" defer></script>
+    <script src="https://vjs.zencdn.net/8.16.1/video.min.js"></script>
     <script src="./assets/js/scripts.js" defer></script>
 
 </body>

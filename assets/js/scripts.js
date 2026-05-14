@@ -324,4 +324,29 @@ document.addEventListener("DOMContentLoaded", function () {
    Init
 ========================= */
   updateLastBorder();
+
+  var videoElements = document.querySelectorAll(".video-js");
+
+  if (videoElements.length > 0) {
+    videoElements.forEach(function (videoEl, index) {
+      var player = videojs(videoEl, {
+        controls: true,
+        fluid: true,
+        playbackRates: [0.5, 1, 1.5, 2],
+        controlBar: {
+          children: [
+            "playToggle",
+            "volumePanel",
+            "currentTimeDisplay",
+            "timeDivider",
+            "durationDisplay",
+            "progressControl",
+            "remainingTimeDisplay",
+            "subsCapsButton",
+            "fullscreenToggle",
+          ],
+        },
+      });
+    });
+  }
 });
