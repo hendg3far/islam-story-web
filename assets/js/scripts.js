@@ -130,6 +130,36 @@ document.addEventListener("DOMContentLoaded", function () {
     }).mount();
   }
 
+  const fatwaSlider = document.querySelector(".fatwa-slider");
+  if (fatwaSlider) {
+    const isRTL =
+      document.documentElement.dir === "rtl" ||
+      document.documentElement.lang === "ar";
+
+    new Splide(fatwaSlider, {
+      direction: isRTL ? "rtl" : "ltr",
+      type: "loop",
+      autoplay: true,
+      speed: 1200,
+      pagination: true,
+      arrows: false,
+      perPage: 2,
+      trimSpace: false,
+      gap: "1rem",
+      breakpoints: {
+        1200: {
+          perPage: 2,
+        },
+        992: {
+          perPage: 2,
+        },
+        576: {
+          perPage: 1,
+        },
+      },
+    }).mount();
+  }
+
   const items = document.querySelectorAll(".mega-menu-item--has-children");
   const container = document.querySelector(".mega-menu-columns");
   const backBtn = document.getElementById("backLevel");
