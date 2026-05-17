@@ -149,6 +149,10 @@ $spacings: (
         color: $value !important;
     }
 
+    .hover-border-#{$name}:hover {
+        border-color: $value !important;
+    }
+
     .bg-#{$name}-color {
         --bg-opacity: 1;
         background-color: rgba($value, var(--bg-opacity));
@@ -1306,6 +1310,21 @@ footer {
     }
 }
 
+.iti--separate-dial-code .iti__selected-flag,
+.iti--allow-dropdown .iti__flag-container:hover .iti__selected-flag {
+    background-color: transparent;
+}
+
+.upload-file {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed rgba(212, 212, 212, 1);
+    height: 135px;
+    border-radius: 8px;
+}
+
 /* RTL Support */
 html[lang="ar"],
 html[dir="rtl"] {
@@ -1316,5 +1335,38 @@ html[dir="rtl"] {
     [type="tel"],
     [type="url"] {
         direction: rtl;
+    }
+
+    .iti__flag-container {
+        right: 0;
+        left: auto;
+    }
+
+    .iti--allow-dropdown input,
+    .iti--allow-dropdown input[type=tel],
+    .iti--allow-dropdown input[type=text],
+    .iti--separate-dial-code input,
+    .iti--separate-dial-code input[type=tel],
+    .iti--separate-dial-code input[type=text] {
+        padding-left: 6px;
+        padding-right: 96px;
+        margin-right: 0;
+        margin-left: 6px;
+    }
+
+    .iti__arrow,
+    .iti--separate-dial-code .iti__selected-dial-code {
+        margin-left: 0;
+        margin-right: 6px;
+    }
+
+    .iti__country-name,
+    .iti__flag-box {
+        margin-right: 0;
+        margin-left: 6px;
+    }
+
+    .iti__country-list {
+        text-align: right;
     }
 }

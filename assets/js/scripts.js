@@ -399,3 +399,45 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+const initPhoneInput = () => {
+  const isRtl = document.documentElement.dir === "rtl";
+
+  document.querySelectorAll('input[type="tel"]').forEach((input) => {
+    intlTelInput(input, {
+      initialCountry: "eg",
+      separateDialCode: true,
+    });
+  });
+};
+
+requestAnimationFrame(() => {
+  initPhoneInput();
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".upload-file").forEach((uploadBox) => {
+    const fileInput = uploadBox.querySelector(".file-input");
+    const textSpan = uploadBox.querySelector(".upload-text");
+
+    if (!fileInput || !textSpan) return;
+
+    const originalText = textSpan.textContent;
+
+    uploadBox.addEventListener("click", () => {
+      fileInput.click();
+    });
+
+    fileInput.addEventListener("click", (e) => {
+      e.stopPropagation();
+    });
+
+    fileInput.addEventListener("change", () => {
+      if (fileInput.files.length > 0) {
+        textSpan.textContent = ` : ${fileInput.files[0].name}`;
+      } else {
+        textSpan.textContent = originalText;
+      }
+    });
+  });
+});
