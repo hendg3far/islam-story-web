@@ -80,6 +80,7 @@ $font-sizes: (
 
 $icon-sizes: (
     "24": 24px,
+    "28": 28px,
     "32": 32px,
     "40": 40px,
     "48": 48px,
@@ -559,6 +560,30 @@ a {
     }
 }
 
+.btn-gray-color {
+    --bs-btn-bg: #e8e8e8;
+    --bs-btn-border-color: #e8e8e8;
+
+    --bs-btn-hover-bg: color-mix(in srgb, var(--color-primary) 100%, black);
+    --bs-btn-hover-border-color: var(--color-primary);
+    --bs-btn-hover-color: var(--color-dark);
+
+    --bs-btn-active-bg: color-mix(in srgb, var(--color-primary) 85%, black);
+    --bs-btn-active-border-color: color-mix(in srgb, var(--color-primary) 85%, black);
+
+    --bs-btn-disabled-bg: color-mix(in srgb, var(--color-primary) 80%, white);
+    --bs-btn-disabled-border-color: color-mix(in srgb, var(--color-primary) 80%, white);
+    --bs-btn-disabled-color: color-mix(in srgb, var(--color-primary) 60%, white);
+
+    font-family: var(--font-primary-medium);
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05), inset 0px 0px 0px 1px rgba(0, 0, 0, 0.18), inset 0px -2px 0px rgba(0, 0, 0, 0.05);
+
+    &:hover {
+        box-shadow: none;
+    }
+}
+
+
 /* === Forms === */
 input,
 select,
@@ -592,6 +617,13 @@ select,
 .ss-content .ss-search input {
     text-align: inherit;
 }
+
+select.form-control+.btn-gray-color,
+.btn-gray-color+select.form-control {
+    background-color: #e8e8e8 !important;
+    border: 1px solid #dee2e6;
+}
+
 
 /* Breadcrumb */
 .breadcrumb {
@@ -1106,6 +1138,27 @@ footer {
     padding-bottom: 32px;
 }
 
+.forum-item {
+    transition: all .3s ease-in-out;
+    padding: 32px;
+}
+
+.forum-item-img {
+    height: 80px;
+}
+
+
+.forum-item:not(:last-child) {
+    border-bottom: 1px solid rgba(232, 232, 232, 1);
+    padding-bottom: 32px;
+}
+
+.forum-item:hover,
+.forum-item.active {
+    background: rgba(250, 180, 35, 0.07);
+
+}
+
 .video-js::before {
     content: "";
     background-color: rgba($color: #000000, $alpha: 0.5);
@@ -1195,6 +1248,50 @@ footer {
 
 .page-content {
     margin-top: -320px;
+}
+
+.cat-list-item {
+    @media(min-width:992px) {
+        &:not(:last-child) {
+            border-bottom: 1px solid rgba(232, 232, 232, 1);
+            padding-bottom: 16px;
+            margin-bottom: 16px;
+        }
+    }
+
+    a {
+        position: relative;
+        color: rgba(102, 102, 102, 1);
+        font-size: map-get($font-sizes, "xl");
+        font-family: var(--font-primary-medium);
+        display: inline-flex;
+        gap: 10px;
+
+        &::before {
+            content: "\f104";
+            font-family: "Font Awesome 6 free";
+            font-weight: 900;
+            display: inline-block;
+        }
+
+        &:hover {
+            color: var(--color-primary);
+        }
+    }
+
+    &.active {
+        a {
+            color: var(--color-dark);
+            font-family: var(--font-secondary-bold);
+
+            &::before {
+                content: "";
+                height: 26px;
+                width: 3px;
+                background-color: var(--color-primary);
+            }
+        }
+    }
 }
 
 /* === Responsive === */
