@@ -17,6 +17,23 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  document.querySelectorAll(".like-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      btn.classList.toggle("active");
+    });
+  });
+
+  document.querySelectorAll(".reply-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      btn.classList.toggle("active");
+      const targetSelector = btn.getAttribute("data-comment");
+      const replyForm = document.querySelector(targetSelector);
+      if (replyForm) {
+        replyForm.classList.toggle("d-none");
+      }
+    });
+  });
+
   const heroSlider = document.querySelector(".hero-slider");
   const heroThumbnails = document.querySelector(".hero-thumbnails");
 

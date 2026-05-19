@@ -583,6 +583,21 @@ a {
     }
 }
 
+.like-btn {
+    color: rgba(184, 184, 184, 1);
+
+    &.active {
+        color: var(--color-primary);
+    }
+}
+
+.reply-btn {
+    color: rgba(73, 73, 73, 1);
+
+    &.active {
+        color: var(--color-primary);
+    }
+}
 
 /* === Forms === */
 input,
