@@ -588,32 +588,66 @@
                         </a>
                     </div>
 
-                    <div class="dropdown">
-                        <button class="btn bg-transparent text-white-color border-0 p-0 dropdown-toggle" type="button"
-                            id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                            <span>
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M8.00065 14.6666C11.6825 14.6666 14.6673 11.6818 14.6673 7.99992C14.6673 4.31802 11.6825 1.33325 8.00065 1.33325C4.31875 1.33325 1.33398 4.31802 1.33398 7.99992C1.33398 11.6818 4.31875 14.6666 8.00065 14.6666Z"
-                                        stroke="currentColor" stroke-width="1.2" />
-                                    <path
-                                        d="M5.33398 7.99992C5.33398 11.9999 8.00065 14.6666 8.00065 14.6666C8.00065 14.6666 10.6673 11.9999 10.6673 7.99992C10.6673 3.99992 8.00065 1.33325 8.00065 1.33325C8.00065 1.33325 5.33398 3.99992 5.33398 7.99992Z"
-                                        stroke="currentColor" stroke-width="1.2" stroke-linejoin="round" />
-                                    <path d="M14 10H2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                    <path d="M14 6H2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
+                    <div class="d-flex gap-3">
+                        <div class="dropdown">
+                            <button class="btn bg-transparent text-white-color border-0 p-0 dropdown-toggle"
+                                type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span>
+                                    <?xml version="1.0" encoding="utf-8"?>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M5 21C5 17.134 8.13401 14 12 14C15.866 14 19 17.134 19 21M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z"
+                                            stroke="currentColor" stroke-width="1.2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                                <span>تسجيل الدخول</span>
+                            </button>
+                            <div class="dropdown-menu p-16">
+                                <button class="dropdown-item" data-bs-toggle="modal" data-bs-target="#login">تسجيل
+                                    الدخول</button>
+                                <button class="dropdown-item" data-bs-toggle="modal" data-bs-target="#register">إنشاء
+                                    حساب</button>
+                            </div>
+                        </div>
+                        <div class="dropdown">
+                            <button class="btn bg-transparent text-white-color border-0 p-0 dropdown-toggle"
+                                type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span>
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M8.00065 14.6666C11.6825 14.6666 14.6673 11.6818 14.6673 7.99992C14.6673 4.31802 11.6825 1.33325 8.00065 1.33325C4.31875 1.33325 1.33398 4.31802 1.33398 7.99992C1.33398 11.6818 4.31875 14.6666 8.00065 14.6666Z"
+                                            stroke="currentColor" stroke-width="1.2" />
+                                        <path
+                                            d="M5.33398 7.99992C5.33398 11.9999 8.00065 14.6666 8.00065 14.6666C8.00065 14.6666 10.6673 11.9999 10.6673 7.99992C10.6673 3.99992 8.00065 1.33325 8.00065 1.33325C8.00065 1.33325 5.33398 3.99992 5.33398 7.99992Z"
+                                            stroke="currentColor" stroke-width="1.2" stroke-linejoin="round" />
+                                        <path d="M14 10H2" stroke="currentColor" stroke-width="1.2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M14 6H2" stroke="currentColor" stroke-width="1.2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
 
-                            </span>
-                            <span>عربي</span>
-                        </button>
-                        <div class="dropdown-menu p-16">
-                            <a href="#" class="dropdown-item">English</a>
-                            <a href="#" class="dropdown-item">عربي</a>
+                                </span>
+                                <span>عربي</span>
+                            </button>
+                            <div class="dropdown-menu p-16">
+                                <a href="#" class="dropdown-item"><img src="./assets/images/flags/EG.gif" alt="flag"
+                                        loading="lazy">
+                                    عربي</a>
+                                <a href="#" class="dropdown-item"><img src="./assets/images/flags/GB.gif" alt="flag"
+                                        loading="lazy"> English</a>
+                                <a href="#" class="dropdown-item"><img src="./assets/images/flags/FR.gif" alt="flag"
+                                        loading="lazy"> French</a>
+                                <a href="#" class="dropdown-item"><img src="./assets/images/flags/ES.gif" alt="flag"
+                                        loading="lazy"> Español</a>
+                                <a href="#" class="dropdown-item"><img src="./assets/images/flags/PT.gif" alt="flag"
+                                        loading="lazy"> Portuguese</a>
+                            </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -862,6 +896,162 @@
 
         </div>
     </nav>
+
+    <div class="modal fade" id="login" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <form class="modal-content p-24 gap-32">
+                <div class="modal-header border-0 p-0">
+                    <img width="158" height="45" src="./assets/images/logo-dark.png" alt="logo" loading="lazy">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <div class="d-flex flex-column gap-32">
+                        <div>
+                            <h6 class="font-primary-medium">تسجيل الدخول </h6>
+                            <span class="text-gray-color">أهلاً بك! يرجى إدخال بياناتك.</span>
+                        </div>
+                        <div class="d-flex flex-column gap-16 text-gray-color">
+                            <div class="form-group">
+                                <label class="mb-2">البريد الإلكتروني</label>
+                                <input type="email" class="form-control py-10 px-14"
+                                    placeholder="اكتب بريدك الابكتروني هنا..">
+                            </div>
+                            <div class="form-group">
+                                <label class="mb-2">كلمة المرور</label>
+                                <input type="password" class="form-control py-10 px-14" placeholder="أنشئ كلمة مرور">
+
+                                <div class="mt-1 d-flex justify-content-between">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="checkChecked"
+                                            checked>
+                                        <label class="form-check-label" for="checkChecked">
+                                            تذكرني
+                                        </label>
+                                    </div>
+                                    <a class="p-0 border-0 bg-transparent text-primary-color font-primary-medium text-decoration-underline cursor-pointer"
+                                        data-bs-toggle="modal" data-bs-target="#forgetPassword">نسيت
+                                        كلمة المرور؟</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer border-0 flex-column p-0">
+                    <button class="btn btn-primary-color py-10 px-5 w-100">تسجيل الدخول</button>
+                    <button class="btn btn-border-color py-10 px-5 w-100"><img src="./assets/images/icons/google.png"
+                            alt="google"> تسجيل الدخول بجوجل</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal fade" id="register" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <form class="modal-content p-24 gap-32">
+                <div class="modal-header border-0 p-0">
+                    <img width="158" height="45" src="./assets/images/logo-dark.png" alt="logo" loading="lazy">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <div class="d-flex flex-column gap-32">
+                        <div>
+                            <h6 class="font-primary-medium">إنشاء حساب معنا </h6>
+                            <span class="text-gray-color">أهلاً بك! يرجى إدخال بياناتك.</span>
+                        </div>
+                        <div class="d-flex flex-column gap-16 text-gray-color">
+                            <div class="form-group">
+                                <label class="mb-2">اسم المستخدم</label>
+                                <input type="text" class="form-control py-10 px-14" placeholder="اكتب اسمك هنا..">
+                            </div>
+                            <div class="form-group">
+                                <label class="mb-2">البريد الإلكتروني</label>
+                                <input type="email" class="form-control py-10 px-14" placeholder="اكتب اسمك هنا..">
+                            </div>
+                            <div class="form-group">
+                                <label class="mb-2">كلمة المرور</label>
+                                <input type="password" class="form-control py-10 px-14" placeholder="أنشئ كلمة مرور">
+                                <span class="d-block mt-1">يجب أن تتكون من 8 أحرف على الأقل.</span>
+                            </div>
+                            <div class="form-group">
+                                <label class="mb-2">تأكيد كلمة المرور</label>
+                                <input type="password" class="form-control py-10 px-14" placeholder="اكتب كلمة مرور">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer border-0 flex-column p-0">
+                    <button class="btn btn-primary-color py-10 px-5 w-100">انشاء حساب</button>
+                    <button class="btn btn-border-color py-10 px-5 w-100"><img src="./assets/images/icons/google.png"
+                            alt="google"> انشاء حساب بجوجل</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal fade" id="forgetPassword" tabindex="-1" aria-labelledby="forgetPasswordModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <form class="modal-content p-24 gap-32">
+                <div class="modal-header border-0 p-0">
+                    <img width="158" height="45" src="./assets/images/logo-dark.png" alt="logo" loading="lazy">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <div class="d-flex flex-column gap-32">
+                        <div>
+                            <h6 class="font-primary-medium">إعادة تعيين كلمة المرور </h6>
+                            <span class="text-gray-color">أدخل بريدك الإلكتروني وسنرسل لك رابطاً لإعادة تعيين كلمة
+                                مرورك.</span>
+                        </div>
+                        <div class="d-flex flex-column gap-16 text-gray-color">
+                            <div class="form-group">
+                                <label class="mb-2">البريد الإلكتروني</label>
+                                <input type="email" class="form-control py-10 px-14"
+                                    placeholder="اكتب بريدك الابكتروني هنا..">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer border-0 flex-column p-0">
+                    <a class="btn btn-primary-color py-10 px-5 w-100 cursor-pointer" data-bs-toggle="modal"
+                        data-bs-target="#newPassword">ارسل الرابط</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal fade" id="newPassword" tabindex="-1" aria-labelledby="newPasswordModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <form class="modal-content p-24 gap-32">
+                <div class="modal-header border-0 p-0">
+                    <img width="158" height="45" src="./assets/images/logo-dark.png" alt="logo" loading="lazy">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <div class="d-flex flex-column gap-32">
+                        <div>
+                            <h6 class="font-primary-medium">تعيين كلمة مرور جديدة </h6>
+                            <span class="text-gray-color">يرجى اختيار كلمة مرور قوية لم تستخدمها من قبل.</span>
+                        </div>
+                        <div class="d-flex flex-column gap-16 text-gray-color">
+                            <div class="form-group">
+                                <label class="mb-2">كلمة المرور</label>
+                                <input type="password" class="form-control py-10 px-14" placeholder="أنشئ كلمة مرور">
+                                <span class="d-block mt-1">يجب أن تتكون من 8 أحرف على الأقل.</span>
+                            </div>
+                            <div class="form-group">
+                                <label class="mb-2">تأكيد كلمة المرور</label>
+                                <input type="password" class="form-control py-10 px-14" placeholder="اكتب كلمة مرور">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer border-0 flex-column p-0">
+                    <button class="btn btn-primary-color py-10 px-5 w-100">تحديث كلمة المرور</button>
+                </div>
+            </form>
+        </div>
+    </div>
 
     <div class="page-head">
         <div class="container">
