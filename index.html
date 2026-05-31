@@ -24,12 +24,6 @@
         <link rel="stylesheet" href="./assets/vendor/splide4.1.3/css/splide.min.css">
     </noscript>
 
-    <link rel="preload" href="./assets/vendor/WOW-master/animate.css" as="style"
-        onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="./assets/vendor/WOW-master/animate.css">
-    </noscript>
-
     <link rel="preload" href="./assets/vendor/slim-select-master/slimselect.css" as="style"
         onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
@@ -40,6 +34,15 @@
 </head>
 
 <body>
+
+    <div id="preloader"
+        class="preloader d-flex flex-column gap-32 justify-content-center align-items-center fixed-top w-100 h-100 bg-dark-color">
+        <img width="344" height="46" src="./assets/images/logo.webp" alt="logo" loading="lazy" fetchpriority="high">
+
+        <div class="loading-bar-container">
+            <div id="loading-bar" class="bg-white-color"></div>
+        </div>
+    </div>
 
     <div class="top-nav bg-dark-color text-white-color py-10">
         <div class="container">
@@ -878,7 +881,7 @@
                                     class="h-100 w-100 object-fit-cover position-absolute top-0 start-0 z-n1"
                                     src="./assets/images/hero/1.webp"
                                     srcset="./assets/images/hero/1-sm.webp 650w, ./assets/images/hero/1.webp 1500w"
-                                    sizes="(max-width: 768px) 100vw, 1500px" alt="hero title" loading="lazy"
+                                    sizes="(max-width: 768px) 100vw, 1500px" alt="hero title" decoding="async"
                                     fetchpriority="high">
                                 <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark-color z-n1"
                                     style="--bg-opacity: 0.3"></div>
@@ -887,13 +890,12 @@
                                         <div class="col-lg-9">
                                             <div
                                                 class="d-flex flex-column gap-24 justify-content-center md-py-240 pt-120 pb-240">
-                                                <div class=" wow fadeInDown">
+                                                <div data-gsap="fade-down">
                                                     <span class="bg-primary-color py-10 px-16 rounded-pill">يومك
-                                                        في
-                                                        رمضان</span>
+                                                        في رمضان</span>
                                                 </div>
-                                                <h2 class="title lg-text-4xl text-2xl text-white-color wow lightSpeedIn line-clamp-3"
-                                                    data-wow-delay="0.3s">
+                                                <h2 class="title lg-text-4xl text-2xl text-white-color line-clamp-3"
+                                                    data-gsap="animate-blur">
                                                     لحظات رمضان من أثمن اللحظات ومع
                                                     ذلك لا
                                                     يحسن بعضنااستغلاله على الوجه الأمثل.</h2>
@@ -917,16 +919,15 @@
                                         <div class="col-lg-9">
                                             <div
                                                 class="d-flex flex-column gap-24 justify-content-center md-py-240 pt-120 pb-240">
-                                                <div class=" wow fadeInDown">
+                                                <div data-gsap="fade-down">
                                                     <span class="bg-primary-color py-10 px-16 rounded-pill">يومك
                                                         في
                                                         رمضان</span>
                                                 </div>
-                                                <h2 class="title lg-text-4xl text-2xl text-white-color wow lightSpeedIn line-clamp-3"
-                                                    data-wow-delay="0.3s">
+                                                <h2 class="title lg-text-4xl text-2xl text-white-color line-clamp-3"
+                                                    data-gsap="animate-blur">
                                                     لحظات رمضان من أثمن اللحظات ومع
-                                                    ذلك لا
-                                                    يحسن بعضنااستغلاله على الوجه الأمثل.</h2>
+                                                    ذلك لا يحسن بعضنااستغلاله على الوجه الأمثل.</h2>
                                             </div>
                                         </div>
                                     </div>
@@ -948,13 +949,13 @@
                                         <div class="col-lg-9">
                                             <div
                                                 class="d-flex flex-column gap-24 justify-content-center md-py-240 pt-120 pb-240">
-                                                <div class=" wow fadeInDown">
+                                                <div data-gsap="fade-down">
                                                     <span class="bg-primary-color py-10 px-16 rounded-pill">يومك
                                                         في
                                                         رمضان</span>
                                                 </div>
-                                                <h2 class="title lg-text-4xl text-2xl text-white-color wow lightSpeedIn line-clamp-3"
-                                                    data-wow-delay="0.3s">
+                                                <h2 class="title lg-text-4xl text-2xl text-white-color line-clamp-3"
+                                                    data-gsap="animate-blur">
                                                     لحظات رمضان من أثمن اللحظات ومع
                                                     ذلك لا
                                                     يحسن بعضنااستغلاله على الوجه الأمثل.</h2>
@@ -978,13 +979,13 @@
                                         <div class="col-lg-9">
                                             <div
                                                 class="d-flex flex-column gap-24 justify-content-center md-py-240 pt-120 pb-240">
-                                                <div class=" wow fadeInDown">
+                                                <div data-gsap="fade-down">
                                                     <span class="bg-primary-color py-10 px-16 rounded-pill">يومك
                                                         في
                                                         رمضان</span>
                                                 </div>
-                                                <h2 class="title lg-text-4xl text-2xl text-white-color wow lightSpeedIn line-clamp-3"
-                                                    data-wow-delay="0.3s">
+                                                <h2 class="title lg-text-4xl text-2xl text-white-color line-clamp-3"
+                                                    data-gsap="animate-blur">
                                                     لحظات رمضان من أثمن اللحظات ومع
                                                     ذلك لا
                                                     يحسن بعضنااستغلاله على الوجه الأمثل.</h2>
@@ -1008,13 +1009,13 @@
                                         <div class="col-lg-9">
                                             <div
                                                 class="d-flex flex-column gap-24 justify-content-center md-py-240 pt-120 pb-240">
-                                                <div class=" wow fadeInDown">
+                                                <div data-gsap="fade-down">
                                                     <span class="bg-primary-color py-10 px-16 rounded-pill">يومك
                                                         في
                                                         رمضان</span>
                                                 </div>
-                                                <h2 class="title lg-text-4xl text-2xl text-white-color wow lightSpeedIn line-clamp-3"
-                                                    data-wow-delay="0.3s">
+                                                <h2 class="title lg-text-4xl text-2xl text-white-color line-clamp-3"
+                                                    data-gsap="animate-blur">
                                                     لحظات رمضان من أثمن اللحظات ومع
                                                     ذلك لا
                                                     يحسن بعضنااستغلاله على الوجه الأمثل.</h2>
@@ -1054,8 +1055,8 @@
             <div class="container">
                 <div class="d-flex flex-column gap-48">
                     <div class="d-flex flex-column gap-32">
-                        <div class="d-flex justify-content-between align-items-center wow fadeInDown">
-                            <h2 class="lg-text-4xl text-2xl mb-0">احدث المقالات</h2>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <h2 class="lg-text-4xl text-2xl mb-0" data-gsap="animate-blur">احدث المقالات</h2>
                             <a href="#" class="animated-arrow font-secondary-bold d-flex gap-12 align-items-center">
                                 <span>كل المقالات</span>
                                 <span class="icon-48 bg-primary-color text-dark-color rounded-circle">
@@ -1071,7 +1072,7 @@
                                 </span>
                             </a>
                         </div>
-                        <ul class="nav nav-tabs nav-tabs-1 bg-light-2-color rounded-3 wow fadeInUp" id="myTab"
+                        <ul class="nav nav-tabs nav-tabs-1 bg-light-2-color rounded-3" id="myTab" data-gsap="fade-up"
                             role="tablist">
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#tab1"
@@ -1095,7 +1096,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="tab-content wow fadeInUp" id="myTabContent">
+                    <div class="tab-content" data-gsap="fade-up" id="myTabContent">
                         <div class="tab-pane fade show active" id="tab1" role="tabpanel" tabindex="0">
                             <div class="row row-gap-5">
                                 <div class="col-lg-3">
@@ -1341,7 +1342,7 @@
         </div>
         <!--End Blog-->
 
-        <div class="ad-section text-center wow fadeIn">
+        <div class="ad-section text-center" data-gsap="fade-up">
             <div class="container">
                 <img src="./assets/images/adv/1.webp" alt="adv title" loading="lazy" />
             </div>
@@ -1351,8 +1352,8 @@
         <div class="cat-section">
             <div class="container">
                 <div class="d-flex flex-column gap-64">
-                    <div class="d-flex justify-content-between align-items-center wow fadeInDown">
-                        <h2 class="lg-text-4xl text-2xl mb-0">استكشف الاقسام</h2>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h2 class="lg-text-4xl text-2xl mb-0" data-gsap="animate-blur">استكشف الاقسام</h2>
                         <a href="#" class="animated-arrow font-secondary-bold d-flex gap-12 align-items-center">
                             <span>كل الاقسام</span>
                             <span class="icon-48 bg-primary-color text-dark-color rounded-circle">
@@ -1371,8 +1372,8 @@
                     <div class="row row-gap-5">
                         <div class="col-xl-4 col-md-6">
                             <div class="d-flex flex-column gap-32">
-                                <div
-                                    class="d-flex justify-content-between align-items-center wow fadeInUp border-bottom border-light pb-16">
+                                <div class="d-flex justify-content-between align-items-center border-bottom border-light pb-16"
+                                    data-gsap="fade-up">
                                     <h4 class="mb-0">علوم التاريخ</h4>
                                     <a href="#"
                                         class="animated-arrow font-secondary-bold d-flex gap-12 align-items-center text-sm">
@@ -1392,7 +1393,7 @@
                                 </div>
                                 <div class="row row-gap-4">
                                     <div class="col-lg-12 col-md-12">
-                                        <div class="card border-0 wow fadeInUp">
+                                        <div class="card border-0" data-gsap="fade-up">
                                             <a href="#" class="position-relative overflow-hidden rounded-3">
                                                 <img width="456" height="257"
                                                     class="card-img-top aspect-media rounded-3"
@@ -1415,7 +1416,7 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-12">
-                                        <div class="card border-0 wow fadeInUp">
+                                        <div class="card border-0" data-gsap="fade-up">
                                             <div class="row align-items-center">
                                                 <div class="col-6">
                                                     <a href="#" class="position-relative  overflow-hidden  rounded-3">
@@ -1443,7 +1444,7 @@
                                         <div class="border-bottom border-light"></div>
                                     </div>
                                     <div class="col-lg-12">
-                                        <div class="card border-0 wow fadeInUp">
+                                        <div class="card border-0" data-gsap="fade-up">
                                             <div class="row align-items-center">
                                                 <div class="col-6">
                                                     <a href="#" class="position-relative  overflow-hidden rounded-3">
@@ -1472,8 +1473,8 @@
                         </div>
                         <div class="col-xl-4 col-md-6">
                             <div class="d-flex flex-column gap-32">
-                                <div
-                                    class="d-flex justify-content-between align-items-center wow fadeInUp border-bottom border-light pb-16">
+                                <div class="d-flex justify-content-between align-items-center border-bottom border-light pb-16"
+                                    data-gsap="fade-up">
                                     <h4 class="mb-0">علوم التاريخ</h4>
                                     <a href="#"
                                         class="animated-arrow font-secondary-bold d-flex gap-12 align-items-center text-sm">
@@ -1493,7 +1494,7 @@
                                 </div>
                                 <div class="row row-gap-4">
                                     <div class="col-lg-12 col-md-12">
-                                        <div class="card border-0 wow fadeInUp">
+                                        <div class="card border-0" data-gsap="fade-up">
                                             <a href="#" class="position-relative overflow-hidden rounded-3">
                                                 <img width="456" height="257"
                                                     class="card-img-top aspect-media rounded-3"
@@ -1516,7 +1517,7 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-12">
-                                        <div class="card border-0 wow fadeInUp">
+                                        <div class="card border-0" data-gsap="fade-up">
                                             <div class="row align-items-center">
                                                 <div class="col-6">
                                                     <a href="#" class="position-relative  overflow-hidden rounded-3">
@@ -1544,7 +1545,7 @@
                                         <div class="border-bottom border-light"></div>
                                     </div>
                                     <div class="col-lg-12">
-                                        <div class="card border-0 wow fadeInUp">
+                                        <div class="card border-0" data-gsap="fade-up">
                                             <div class="row align-items-center">
                                                 <div class="col-6">
                                                     <a href="#" class="position-relative  overflow-hidden rounded-3">
@@ -1573,8 +1574,8 @@
                         </div>
                         <div class="col-xl-4 col-md-6">
                             <div class="d-flex flex-column gap-32">
-                                <div
-                                    class="d-flex justify-content-between align-items-center wow fadeInUp border-bottom border-light pb-16">
+                                <div class="d-flex justify-content-between align-items-center border-bottom border-light pb-16"
+                                    data-gsap="fade-up">
                                     <h4 class="mb-0">علوم التاريخ</h4>
                                     <a href="#"
                                         class="animated-arrow font-secondary-bold d-flex gap-12 align-items-center text-sm">
@@ -1594,7 +1595,7 @@
                                 </div>
                                 <div class="row row-gap-4">
                                     <div class="col-lg-12 col-md-12">
-                                        <div class="card border-0 wow fadeInUp">
+                                        <div class="card border-0" data-gsap="fade-up">
                                             <a href="#" class="position-relative overflow-hidden rounded-3">
                                                 <img width="456" height="257"
                                                     class="card-img-top aspect-media rounded-3"
@@ -1617,7 +1618,7 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-12">
-                                        <div class="card border-0 wow fadeInUp">
+                                        <div class="card border-0" data-gsap="fade-up">
                                             <div class="row align-items-center">
                                                 <div class="col-6">
                                                     <a href="#" class="position-relative  overflow-hidden rounded-3">
@@ -1645,7 +1646,7 @@
                                         <div class="border-bottom border-light"></div>
                                     </div>
                                     <div class="col-lg-12">
-                                        <div class="card border-0 wow fadeInUp">
+                                        <div class="card border-0" data-gsap="fade-up">
                                             <div class="row align-items-center">
                                                 <div class="col-6">
                                                     <a href="#" class="position-relative  overflow-hidden rounded-3">
@@ -1679,7 +1680,7 @@
         <!--End Category-->
 
         <div class="d-flex flex-column gap-80">
-            <div class="ad-section text-center wow fadeIn">
+            <div class="ad-section text-center" data-gsap="fade-up">
                 <div class="container">
                     <img src="./assets/images/adv/2.webp" alt="adv title" loading="lazy" />
                 </div>
@@ -1689,8 +1690,8 @@
             <div class="media-section bg-white-color">
                 <div class="container">
                     <div class="d-flex flex-column gap-64">
-                        <div class="d-flex justify-content-between align-items-center wow fadeInDown">
-                            <h2 class="lg-text-4xl text-2xl mb-0">السلاسل المرئية</h2>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <h2 class="lg-text-4xl text-2xl mb-0" data-gsap="animate-blur">السلاسل المرئية</h2>
                             <a href="#" class="animated-arrow font-secondary-bold d-flex gap-12 align-items-center">
                                 <span>استكشف السلاسل</span>
                                 <span class="icon-48 bg-primary-color text-dark-color rounded-circle">
@@ -1712,7 +1713,7 @@
 
                         <div class="row row-gap-4">
                             <div class="col-lg-4 col-md-6">
-                                <div class="card border-0  wow fadeInUp">
+                                <div class="card border-0" data-gsap="fade-up">
                                     <div class="position-relative rounded-3 overflow-hidden">
                                         <img width="405" height="228" src="./assets/images/media/1.webp" alt=""
                                             class="card-img-top aspect-media rounded-3">
@@ -1739,7 +1740,7 @@
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6">
-                                <div class="card border-0  wow fadeInUp">
+                                <div class="card border-0" data-gsap="fade-up">
                                     <div class="position-relative rounded-3 overflow-hidden">
                                         <img width="405" height="228" src="./assets/images/media/2.webp" alt=""
                                             class="card-img-top aspect-media rounded-3">
@@ -1766,7 +1767,7 @@
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6">
-                                <div class="card border-0  wow fadeInUp">
+                                <div class="card border-0" data-gsap="fade-up">
                                     <div class="position-relative rounded-3 overflow-hidden">
                                         <img width="405" height="228" src="./assets/images/media/3.webp" alt=""
                                             class="card-img-top aspect-media rounded-3">
@@ -1803,8 +1804,8 @@
             <div class="library-section">
                 <div class="d-flex flex-column gap-64">
                     <div class="container">
-                        <div class="d-flex justify-content-between align-items-center wow fadeInDown">
-                            <h2 class="lg-text-4xl text-2xl mb-0">تصفح معرض المكتبة</h2>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <h2 class="lg-text-4xl text-2xl mb-0" data-gsap="animate-blur">تصفح معرض المكتبة</h2>
                             <a href="#" class="animated-arrow font-secondary-bold d-flex gap-12 align-items-center">
                                 <span>استكشف المكتبة المرئية</span>
                                 <span class="icon-48 bg-primary-color text-dark-color rounded-circle">
@@ -1821,7 +1822,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="splide library-slider wow fadeInUp">
+                    <div class="splide library-slider" data-gsap="fade-up">
                         <div class="splide__track">
                             <div class="splide__list">
                                 <div class="splide__slide">
@@ -1964,7 +1965,7 @@
             </div>
             <!--End Library-->
 
-            <div class="ad-section text-center wow fadeIn">
+            <div class="ad-section text-center" data-gsap="fade-up">
                 <div class="container">
                     <img src="./assets/images/adv/2.webp" alt="adv title" loading="lazy" />
                 </div>
@@ -1974,8 +1975,8 @@
             <div class="book-section">
                 <div class="d-flex flex-column gap-64">
                     <div class="container">
-                        <div class="d-flex justify-content-between align-items-center wow fadeInDown">
-                            <h2 class="lg-text-4xl text-2xl mb-0">اشهر الفتاوي</h2>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <h2 class="lg-text-4xl text-2xl mb-0" data-gsap="animate-blur">اشهر الفتاوي</h2>
                             <a href="#" class="animated-arrow font-secondary-bold d-flex gap-12 align-items-center">
                                 <span>كل الفتاوي</span>
                                 <span class="icon-48 bg-primary-color text-dark-color rounded-circle">
@@ -1992,7 +1993,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="splide books-slider wow fadeInUp">
+                    <div class="splide books-slider" data-gsap="fade-up">
                         <div class="splide__track">
                             <div class="splide__list">
                                 <div class="splide__slide">
@@ -2347,8 +2348,8 @@
             </div>
             <div class="container">
                 <div class="d-flex flex-column gap-64">
-                    <div class="d-flex justify-content-between align-items-center wow fadeInDown">
-                        <h2 class="lg-text-4xl text-2xl mb-0">اشهر الفتاوي</h2>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h2 class="lg-text-4xl text-2xl mb-0" data-gsap="animate-blur">اشهر الفتاوي</h2>
                         <a href="#" class="animated-arrow font-secondary-bold d-flex gap-12 align-items-center">
                             <span>كل الفتاوي</span>
                             <span class="icon-48 bg-primary-color text-dark-color rounded-circle">
@@ -2364,7 +2365,8 @@
                             </span>
                         </a>
                     </div>
-                    <ul class="nav nav-tabs nav-tabs-1 bg-white-color rounded-3 wow fadeInUp" id="myTab" role="tablist">
+                    <ul class="nav nav-tabs nav-tabs-1 bg-white-color rounded-3" id="myTab" role="tablist"
+                        data-gsap="fade-up">
                         <li class="nav-item" role="presentation">
                             <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#tab-1" type="button"
                                 role="tab" aria-selected="true">الكل</button>
@@ -2387,7 +2389,7 @@
                                 role="tab" aria-selected="false">الفقه</button>
                         </li>
                     </ul>
-                    <div class="tab-content wow fadeInUp" id="myTabContent">
+                    <div class="tab-content" id="myTabContent" data-gsap="fade-up">
                         <div class="tab-pane fade show active" id="tab-1" role="tabpanel" tabindex="0">
                             <div class="row row-gap-4">
                                 <div class="col-md-6">
@@ -2751,8 +2753,10 @@
 
     <script src="./assets/vendor/bootstrap-5.3.8/js/bootstrap.bundle.min.js" defer></script>
     <script src="./assets/vendor/splide4.1.3/js/splide.min.js" defer></script>
-    <script src="./assets/vendor/WOW-master/wow.min.js" defer></script>
     <script src="./assets/vendor/slim-select-master/slimselect.js" defer></script>
+    <script src="./assets/vendor/gsap/dist/gsap.min.js" defer></script>
+    <script src="./assets/vendor/gsap/dist/ScrollTrigger.min.js" defer></script>
+    <script src="./assets/vendor/gsap/dist/SplitText.min.js" defer></script>
     <script src="./assets/js/scripts.js" defer></script>
 
 </body>

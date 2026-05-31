@@ -30,12 +30,6 @@
         <link rel="stylesheet" href="./assets/vendor/splide4.1.3/css/splide.min.css">
     </noscript>
 
-    <link rel="preload" href="./assets/vendor/WOW-master/animate.css" as="style"
-        onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="./assets/vendor/WOW-master/animate.css">
-    </noscript>
-
     <link rel="preload" href="./assets/vendor/slim-select-master/slimselect.css" as="style"
         onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
@@ -602,7 +596,7 @@
                                             stroke-linejoin="round" />
                                     </svg>
                                 </span>
-                                <span>تسجيل الدخول</span>
+                                <span class="d-lg-inline d-none">تسجيل الدخول</span>
                             </button>
                             <div class="dropdown-menu p-16">
                                 <button class="dropdown-item" data-bs-toggle="modal" data-bs-target="#login">تسجيل
@@ -630,7 +624,7 @@
                                     </svg>
 
                                 </span>
-                                <span>عربي</span>
+                                <span class="d-lg-inline d-none">عربي</span>
                             </button>
                             <div class="dropdown-menu p-16">
                                 <a href="#" class="dropdown-item"><img src="./assets/images/flags/EG.gif" alt="flag"
@@ -1077,7 +1071,7 @@
             <div class="bg-white lg-px-80 px-16 lg-pt-120 pt-64 rounded-4">
                 <div class="d-flex flex-column lg-gap-64 gap-32 text-lg">
 
-                    <div class="d-flex align-items-start justify-content-between">
+                    <div class="d-flex align-items-start justify-content-between" data-gsap="fade-up">
                         <div class="d-flex gap-4">
                             <img width="80" height="80"
                                 class="forum-item-img rounded-circle object-fit-cover flex-shrink-0"
@@ -1098,18 +1092,25 @@
                             متابعه</a>
                     </div>
 
-                    <div>أعلنت مؤسسة الملك خالد عن فوز 18 منظمة غير ربحية ببرنامج "أهالينا للاستثمار الاجتماعي" في دورته
-                        التاسعة بالشراكة مع البنك الأهلي السعودي، من خلال حفل أقيم اليوم في مقر مؤسسة الملك خالد لتوقيع
-                        اتفاقيات المِنَح مع المنظمات الفائزة، وبحضور الرئيس التنفيذي للمؤسسة صاحبة السمو الأميرة نوف بنت
-                        محمد بن عبدالله، وممثلي البنك الأهلي السعودي والمنظمات الممنوحة.</div>
+                    <div class="d-flex flex-column lg-gap-64 gap-32 text-lg" data-gsap="fade-up">
 
-                    <div>وشملت الدورة التاسعة للبرنامج المنظمات من جميع مناطق المملكة حيث تم اختيار المنظمات الممنوحة
-                        بعد اجتيازهم لمرحلة المراجعة والفرز والتقييم والتي تمت بناءً على معايير محددة، بالإضافة إلى
-                        الأثر الذي سيحققه المشروع على المستفيدين. وذلك بهدف تمكين ما يقارب 530 مستفيداً من المنظمات
-                        الفائزة، تعزيزاً لقدراتهم واستدامة مصادر الدخل لديهم.</div>
+                        <div>أعلنت مؤسسة الملك خالد عن فوز 18 منظمة غير ربحية ببرنامج "أهالينا للاستثمار الاجتماعي" في
+                            دورته
+                            التاسعة بالشراكة مع البنك الأهلي السعودي، من خلال حفل أقيم اليوم في مقر مؤسسة الملك خالد
+                            لتوقيع
+                            اتفاقيات المِنَح مع المنظمات الفائزة، وبحضور الرئيس التنفيذي للمؤسسة صاحبة السمو الأميرة نوف
+                            بنت
+                            محمد بن عبدالله، وممثلي البنك الأهلي السعودي والمنظمات الممنوحة.</div>
 
-                    <div class="ad-section">
-                        <img class="w-100" src="./assets/images/adv/2.webp" alt="adv title" loading="lazy" />
+                        <div>وشملت الدورة التاسعة للبرنامج المنظمات من جميع مناطق المملكة حيث تم اختيار المنظمات
+                            الممنوحة
+                            بعد اجتيازهم لمرحلة المراجعة والفرز والتقييم والتي تمت بناءً على معايير محددة، بالإضافة إلى
+                            الأثر الذي سيحققه المشروع على المستفيدين. وذلك بهدف تمكين ما يقارب 530 مستفيداً من المنظمات
+                            الفائزة، تعزيزاً لقدراتهم واستدامة مصادر الدخل لديهم.</div>
+                    </div>
+
+                    <div class="ad-section" data-gsap="fade-up">
+                        <img class="w-100 adv-banner" src="./assets/images/adv/2.webp" alt="adv title" loading="lazy" />
                     </div>
 
                     <div>وشملت الدورة التاسعة للبرنامج المنظمات من جميع مناطق المملكة حيث تم اختيار المنظمات الممنوحة
@@ -1117,7 +1118,7 @@
                         الأثر. وذلك بهدف تمكين ما يقارب 530 مستفيداً من المنظمات الفائزة، تعزيزاً لقدراتهم واستدامة
                         مصادر الدخل لديهم.</div>
 
-                    <div class="border-top border-bottom py-16">
+                    <div class="border-top border-bottom py-16" data-gsap="fade-up">
                         <div class="d-flex justify-content-between flex-wrap gap-24">
                             <div class="d-flex gap-24 font-primary-medium text-gray-color">
                                 <span>
@@ -1160,9 +1161,8 @@
                     </div>
 
 
-
                     <div class="comments d-flex flex-column gap-56">
-                        <div class="comment-item wow fadeInUp">
+                        <div class="comment-item" data-gsap="fade-up">
                             <div class="d-flex justify-content-between">
                                 <div class="d-flex gap-24 align-items-start">
                                     <img class="object-fit-cover flex-shrink-0" width="80" height="80"
@@ -1223,7 +1223,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="comment-item wow fadeInUp">
+                        <div class="comment-item" data-gsap="fade-up">
                             <div class="d-flex justify-content-between">
                                 <div class="d-flex gap-24 align-items-start">
                                     <img class="object-fit-cover flex-shrink-0" width="80" height="80"
@@ -1284,7 +1284,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="comment-item wow fadeInUp">
+                        <div class="comment-item" data-gsap="fade-up">
                             <div class="d-flex justify-content-between">
                                 <div class="d-flex gap-24 align-items-start">
                                     <img class="object-fit-cover flex-shrink-0" width="80" height="80"
@@ -1503,8 +1503,10 @@
 
     <script src="./assets/vendor/bootstrap-5.3.8/js/bootstrap.bundle.min.js" defer></script>
     <script src="./assets/vendor/splide4.1.3/js/splide.min.js" defer></script>
-    <script src="./assets/vendor/WOW-master/wow.min.js" defer></script>
     <script src="./assets/vendor/slim-select-master/slimselect.js" defer></script>
+    <script src="./assets/vendor/gsap/dist/gsap.min.js" defer></script>
+    <script src="./assets/vendor/gsap/dist/ScrollTrigger.min.js" defer></script>
+    <script src="./assets/vendor/gsap/dist/SplitText.min.js" defer></script>
     <script src="./assets/js/scripts.js" defer></script>
 
 </body>

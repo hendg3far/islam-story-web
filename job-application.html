@@ -30,12 +30,6 @@
         <link rel="stylesheet" href="./assets/vendor/splide4.1.3/css/splide.min.css">
     </noscript>
 
-    <link rel="preload" href="./assets/vendor/WOW-master/animate.css" as="style"
-        onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="./assets/vendor/WOW-master/animate.css">
-    </noscript>
-
     <link rel="preload" href="./assets/vendor/slim-select-master/slimselect.css" as="style"
         onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
@@ -896,16 +890,17 @@
 
                     <div class="d-flex flex-wrap align-items-center justify-content-between gap-16">
                         <div class="d-flex flex-column gap-10">
-                            <h1 class="wow fadeInDown mb-0">قدم علي الوظيفة</h1>
-                            <span class="d-block font-primary-medium text-gray-color text-lg lh-lg wow fadeInUp">مرحبا
+                            <h1 class="mb-0" data-gsap="animate-blur">قدم علي الوظيفة</h1>
+                            <span class="d-block font-primary-medium text-gray-color text-lg lh-lg"
+                                data-gsap="fade-up">مرحبا
                                 بك في مجتمع قصة الاسلام, حيث يمكنك هنا مشاركة جميع استفساراتك و تعليقاتك و خبراتك مع
                                 الاخرين </span>
                         </div>
                     </div>
 
                     <div class="d-flex flex-column gap-32">
-                        <h4 class="mb-0">بياناتك الشخصية</h4>
-                        <form action="">
+                        <h4 class="mb-0" data-gsap="fade-up">بياناتك الشخصية</h4>
+                        <form action="" data-gsap="fade-up">
                             <div class="row row-gap-4">
                                 <div class="col-sm-6">
                                     <div class="d-flex flex-column gap-10">
@@ -1157,9 +1152,11 @@
 
     <script src="./assets/vendor/bootstrap-5.3.8/js/bootstrap.bundle.min.js" defer></script>
     <script src="./assets/vendor/splide4.1.3/js/splide.min.js" defer></script>
-    <script src="./assets/vendor/WOW-master/wow.min.js" defer></script>
     <script src="./assets/vendor/slim-select-master/slimselect.js" defer></script>
     <script src="./assets/vendor/intl-tel-input/js/intlTelInput.min.js" defer></script>
+    <script src="./assets/vendor/gsap/dist/gsap.min.js" defer></script>
+    <script src="./assets/vendor/gsap/dist/ScrollTrigger.min.js" defer></script>
+    <script src="./assets/vendor/gsap/dist/SplitText.min.js" defer></script>
     <script src="./assets/js/scripts.js" defer></script>
 
 </body>

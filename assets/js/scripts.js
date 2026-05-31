@@ -1,6 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-  new WOW().init();
-
   document.querySelectorAll("select").forEach((element) => {
     const isRTL =
       document.documentElement.dir === "rtl" ||
@@ -417,6 +415,11 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+ScrollTrigger.config({
+  ignoreMobileResize: true,
+  limitCallbacks: true,
+});
+
 const initPhoneInput = () => {
   const isRtl = document.documentElement.dir === "rtl";
 
@@ -428,8 +431,210 @@ const initPhoneInput = () => {
   });
 };
 
-requestAnimationFrame(() => {
+function initTextAnimations() {
+  document.fonts.ready.then(() => {
+    const elements = document.querySelectorAll("[data-gsap]");
+    const splits = [];
+
+    elements.forEach((el) => {
+      const animationType = el.dataset.gsap;
+
+      let split = null;
+      let isArabic = false;
+
+      if (
+        animationType === "split-chars" ||
+        animationType === "split-lines" ||
+        animationType === "animate-blur"
+      ) {
+        isArabic =
+          el.getAttribute("lang") === "ar" ||
+          document.documentElement.lang === "ar";
+
+        const typeSetting =
+          animationType === "split-lines"
+            ? "lines"
+            : isArabic
+              ? "words"
+              : "chars, words";
+
+        split = new SplitText(el, {
+          type: typeSetting,
+        });
+      }
+
+      splits.push({ el, split, animationType, isArabic });
+    });
+
+    setTimeout(() => {
+      requestAnimationFrame(() => {
+        runAnimations(splits);
+        ScrollTrigger.refresh();
+      });
+    }, 0);
+  });
+}
+
+function runAnimations(splits) {
+  splits.forEach(({ el, split, animationType, isArabic }) => {
+    gsap.set(el, {
+      visibility: "visible",
+      opacity: 1,
+      willChange: "transform",
+    });
+
+    const scrollSettings = {
+      trigger: el,
+      start: "top bottom-=50",
+      once: true,
+      invalidateOnRefresh: false,
+    };
+
+    if (animationType === "split-chars") {
+      gsap.from(isArabic ? split.words : split.chars, {
+        scrollTrigger: scrollSettings,
+        opacity: 0,
+        y: 35,
+        rotateX: -35,
+        stagger: 0.015,
+        duration: 1,
+        ease: "power4.out",
+      });
+      return;
+    }
+
+    if (animationType === "split-lines") {
+      gsap.from(split.lines, {
+        scrollTrigger: scrollSettings,
+        opacity: 0,
+        y: 18,
+        stagger: 0.08,
+        duration: 0.8,
+        ease: "power3.out",
+      });
+      return;
+    }
+
+    if (animationType === "animate-blur") {
+      gsap.from(isArabic ? split.words : split.chars, {
+        scrollTrigger: scrollSettings,
+        opacity: 0,
+        filter: "blur(10px)",
+        y: 15,
+        stagger: 0.02,
+        duration: 0.9,
+        ease: "power3.out",
+      });
+      return;
+    }
+
+    const presets = {
+      fadeUp: { y: 40, opacity: 0 },
+      fadeDown: { y: -40, opacity: 0 },
+      fadeIn: { opacity: 0 },
+      scaleUp: { scale: 0.85, opacity: 0 },
+      slideIn: { x: -40, opacity: 0 },
+      zoomIn: { scale: 0.7, opacity: 0 },
+      "fade-up": { y: 50, opacity: 0 },
+      "fade-down": { y: -50, opacity: 0 },
+    };
+
+    const anim = presets[animationType];
+
+    if (anim) {
+      gsap.from(el, {
+        ...anim,
+        scrollTrigger: scrollSettings,
+        duration: animationType.includes("fade") ? 1 : 0.9,
+        ease: animationType.includes("fade") ? "expo.out" : "power3.out",
+      });
+    }
+  });
+}
+
+function initCardHoverAnimations() {
+  gsap.utils.toArray(".card").forEach((card) => {
+    const image = card.querySelector(".card-img-top");
+
+    if (!image) return;
+
+    gsap.set(card, {
+      transformPerspective: 1000,
+      transformStyle: "preserve-3d",
+    });
+
+    card.addEventListener("mouseenter", () => {
+      gsap.to(card, {
+        y: -12,
+        rotateX: 3,
+        duration: 0.5,
+        ease: "power3.out",
+      });
+
+      gsap.to(image, {
+        scale: 1.12,
+        duration: 0.8,
+        ease: "power4.out",
+      });
+    });
+
+    card.addEventListener("mouseleave", () => {
+      gsap.to(card, {
+        y: 0,
+        rotateX: 0,
+        duration: 0.5,
+        ease: "power3.out",
+      });
+
+      gsap.to(image, {
+        scale: 1,
+        duration: 0.8,
+        ease: "power4.out",
+      });
+    });
+  });
+}
+
+function initPreloader(onComplete) {
+  const preloader = document.getElementById("preloader");
+  const loadingBar = document.getElementById("loading-bar");
+
+  if (!preloader || !loadingBar) {
+    onComplete?.();
+    return;
+  }
+
+  let progress = 0;
+
+  const interval = setInterval(() => {
+    progress += Math.random() * 12;
+
+    loadingBar.style.width = `${Math.min(progress, 100)}%`;
+
+    if (progress >= 100) {
+      clearInterval(interval);
+
+      loadingBar.style.width = "100%";
+
+      setTimeout(() => {
+        preloader.classList.add("hidden");
+        document.body.classList.add("loaded");
+
+        onComplete?.();
+      }, 400);
+    }
+  }, 100);
+}
+
+const runInit = window.requestIdleCallback || requestAnimationFrame;
+
+runInit(() => {
   initPhoneInput();
+
+  initPreloader(() => {
+    initTextAnimations();
+    initCardHoverAnimations();
+  });
 });
 
 document.addEventListener("DOMContentLoaded", () => {
